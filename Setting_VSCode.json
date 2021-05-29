@@ -1,0 +1,131 @@
+{
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "workbench.preferredLightColorTheme": "Dracula",
+    "editor.tokenColorCustomizations": {
+
+        //"strings": "#fca35a",
+        //"numbers": "#4ec958",
+        "strings": "#fc8728",
+        "comments": "#525252",
+
+        "textMateRules": [
+            { //comentario
+                "scope": "comment",
+                "settings": {
+                    "fontStyle": "italic",
+                    "foreground": "#525252",}
+            },
+
+            {   //nome da função
+                "scope": "entity.name.function",
+                "settings": {
+                    "foreground": "#5a4ec9",}
+            },
+
+           {   // funções internas
+               "scope": "keyword.control",
+               "settings": {
+                   "foreground": "#c94e4e",}
+           },
+
+            {   // operadores
+                "scope": "keyword.operator",
+                "settings": {
+                    "foreground": "#c94e4e",}
+            },
+
+            // {   // texto
+            //     //"scope": "meta",
+            //     "settings": {
+            //         "foreground": "#bebebe",}
+            // },
+            //df105f
+
+            {   // funções internas def, class ...
+                "scope": "storage.type",
+                "settings": {
+                    "foreground": "#c94e4e",}
+            },
+
+            {   // __init__, len ...
+                "scope": "support.function",
+                "settings": {
+                    "foreground": "#ff4e83",}
+            },
+
+            {   // str, float ...
+                "scope": "support.type",
+                "settings": {
+                    //"fontStyle": "bold",
+                    "foreground": "#ff4e83",}
+            }, //  48f874 
+
+            // {   // self
+            //     "scope": "variable.language",
+            //     "settings": {
+            //         "fontStyle": "italic",
+            //         "foreground": "#30d353",}
+            //         //"foreground": "#fc8728",}
+            // },
+
+            // {   // class
+            //     "scope": "entity.other.inherited-class",
+            //     "settings": {
+            //         "fontStyle": "italic",
+            //         //"foreground": "#4ec985",
+            //     }
+            // },
+
+            {   // variaveis
+                "scope": "variable.parameter",
+                "settings": {
+                    "fontStyle": "italic",
+                    "foreground": "#4ec985",}
+            },
+
+            {   // STRING
+                "scope": "punctuation.definition.string.begin",
+                "settings": {
+                    //"fontStyle": "bold",
+                    "foreground": "#fc8728",}
+            },
+
+            {   // STRING
+                "scope": "punctuation.definition.string.end",
+                "settings": {
+                    //"fontStyle": "bold",
+                    "foreground": "#fc8728",}
+            },
+
+        ]
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Dracula",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "editor.renameOnType": true,
+    "liveServer.settings.CustomBrowser": "microsoft-edge",
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
+    "jupyter.sendSelectionToInteractiveWindow": true,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "terminal.integrated.defaultProfile.windows": "Ubuntu-18.04 (WSL)",
+    "editor.fontFamily": "'Source Code Pro Regular', 'Fira Code Retina', Consolas, 'Courier New', monospace",
+    "editor.inlineHints.fontFamily": "'Segoi UI', Consolas, 'Courier New', monospace",
+    //"python.linting.pylintArgs": ["extension-pkg-whitelist=PyQt5"]
+}
