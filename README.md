@@ -10,4 +10,4 @@
   
 3. Substitua os dados do arquivo *"dracula.json"* pelos dados do [Settings_Dracula](https://github.com/Ailson-Araujo/MyThemeVsCode_ToPython/blob/main/Settings_Dracula.json)
 
-4. Substitua os dados de Configuração do VSCode: *"settings.json"* pelos dados do [Setting_VSCode](https://github.com/Ailson-Araujo/MyThemeVsCode_ToPython/blob/main/Setting_VSCode.json). Os dados de configuração pode ser verificado precionando a tecla **F1** em seguida digitar setting e selecionar a primeira opção exibida.
+4. Substitua os dados de Configuração do VSCode: *"settings.json"* pelos dados do [Setting_VSCode](https://github.com/Ailson-Araujo/MyThemeVsCode_ToPython/blob/main/Setting_VSCode.json). Os dados de configurações podem ser verificados precionando a tecla **F1**, em seguida digitar setting e selecionar a primeira opção exibida.
