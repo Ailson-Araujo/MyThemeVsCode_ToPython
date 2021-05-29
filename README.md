@@ -4,9 +4,9 @@
 **1.** Instale o tema Drácula no VSCode.
 
 **2.** Execute um dos comandos abaixo e localize a pasta do tema drácula.
-    * **Linux** `~/.vscode/extensions`
-    * **macOs** `~/.vscode/extensions`
-    * **Windows** `%USERPROFILE%\.vscode\extensions`
+    ** **Linux** `~/.vscode/extensions`
+    ** **macOs** `~/.vscode/extensions`
+    ** **Windows** `%USERPROFILE%\.vscode\extensions`
   
 **3.** Substitua os dados do arquivo *"dracula.json"* pelos dados do [Settings_Dracula](https://github.com/Ailson-Araujo/MyThemeVsCode_ToPython/blob/main/Settings_Dracula.json)
 
