@@ -27,7 +27,7 @@
    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
    ```
    
-3. Instação de Tema.
+3. Instalação de Tema.
    
    - Tema [Spaceship ZSH](https://github.com/spaceship-prompt/spaceship-prompt)
    ```
