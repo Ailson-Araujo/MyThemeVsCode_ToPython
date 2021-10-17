@@ -58,9 +58,16 @@
 ## Integrando ZSH como shell no VSCode Windows
 
 ```
-"terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe",
-"terminal.integrated.shellArgs.windows": ["-c", "zsh"]
-"terminal.integrated.fontFamily": "Consolas",
+
+"terminal.integrated.profiles.windows": {
+    "ZSH":{
+        "path": "C:\\Windows\\System32\\bash.exe",
+        "args": ["-c", "zsh"],
+        "icon": "terminal"
+    },
+},
+    
+"terminal.integrated.defaultProfile.windows": "ZSH",
 ```
    
    
