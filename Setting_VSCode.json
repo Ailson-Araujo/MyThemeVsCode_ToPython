@@ -1,11 +1,10 @@
 {
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
-    "workbench.preferredLightColorTheme": "Dracula",
+    "telemetry.telemetryLevel": "off",
+
     "editor.tokenColorCustomizations": {
 
         //"strings": "#fca35a",
-        //"numbers": "#4ec958",
+        "numbers": "#55aaff",//"#d6006e",//"#4ec958",
         "strings": "#fc8728",
         "comments": "#525252",
 
@@ -17,11 +16,18 @@
                     "foreground": "#525252",}
             },
 
-            {   //nome da função
-                "scope": "entity.name.function",
-                "settings": {
-                    "foreground": "#5a4ec9",}
-            },
+            // {
+            //     "scope": "string",
+            //     "settings": {
+            //         "fontStyle": "italic"
+            //     }
+            // },
+
+            // {   //nome da função
+            //     "scope": "entity.name.function",
+            //     "settings": {
+            //         "foreground": "#5a4ec9",}
+            // },
 
            {   // funções internas
                "scope": "keyword.control",
@@ -35,31 +41,24 @@
                     "foreground": "#c94e4e",}
             },
 
-            // {   // texto
-            //     //"scope": "meta",
-            //     "settings": {
-            //         "foreground": "#bebebe",}
-            // },
-            //df105f
-
             {   // funções internas def, class ...
                 "scope": "storage.type",
                 "settings": {
                     "foreground": "#c94e4e",}
             },
 
-            {   // __init__, len ...
-                "scope": "support.function",
-                "settings": {
-                    "foreground": "#ff4e83",}
-            },
+            // {   // __init__, len ...
+            //     "scope": "support.function",
+            //     "settings": {
+            //         "foreground": "#ff4e83",}
+            // },
 
-            {   // str, float ...
-                "scope": "support.type",
-                "settings": {
-                    //"fontStyle": "bold",
-                    "foreground": "#ff4e83",}
-            }, //  48f874 
+            // {   // str, float ...
+            //     "scope": "support.type",
+            //     "settings": {
+            //         //"fontStyle": "bold",
+            //         "foreground": "#ff4e83",}
+            // }, //  48f874 
 
             // {   // self
             //     "scope": "variable.language",
@@ -69,13 +68,13 @@
             //         //"foreground": "#fc8728",}
             // },
 
-            // {   // class
-            //     "scope": "entity.other.inherited-class",
-            //     "settings": {
-            //         "fontStyle": "italic",
-            //         //"foreground": "#4ec985",
-            //     }
-            // },
+            {   // class
+                "scope": "entity.other.inherited-class",
+                "settings": {
+                    "fontStyle": "italic",
+                    //"foreground": "#4ec985",
+                }
+            },
 
             {   // variaveis
                 "scope": "variable.parameter",
@@ -87,7 +86,7 @@
             {   // STRING
                 "scope": "punctuation.definition.string.begin",
                 "settings": {
-                    //"fontStyle": "bold",
+                    //"fontStyle": "italic",
                     "foreground": "#fc8728",}
             },
 
@@ -100,11 +99,11 @@
 
         ]
     },
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Dracula",
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "editor.renameOnType": true,
+    
+    "editor.linkedEditing": true,
     "liveServer.settings.CustomBrowser": "microsoft-edge",
+
+    // dart
     "[dart]": {
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
@@ -117,15 +116,39 @@
         "editor.tabCompletion": "onlySnippets",
         "editor.wordBasedSuggestions": false
     },
+    
     "jupyter.sendSelectionToInteractiveWindow": true,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
-    "terminal.integrated.defaultProfile.windows": "Ubuntu-18.04 (WSL)",
-    "editor.fontFamily": "'Source Code Pro Regular', 'Fira Code Retina', Consolas, 'Courier New', monospace",
-    "editor.inlineHints.fontFamily": "'Segoi UI', Consolas, 'Courier New', monospace",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    
+    // Definição de terminal padrão zsh 
+    "terminal.integrated.profiles.windows": {
+        "ZSH":{
+            "path": "C:\\Windows\\System32\\bash.exe",
+            "args": ["-c", "zsh"],
+            "icon": "terminal"
+        },
+    },
+
+    "terminal.integrated.defaultProfile.windows": "ZSH",
+    
+    // Desativa a inicialização do ambiente virtual quando em uso do ZSH
+    "python.terminal.activateEnvironment": true,
+    
+    // Fonte do terminal
+    "terminal.integrated.fontFamily": "'Fira Code Light', Consolas",
+    "terminal.integrated.fontSize": 13,
+
+    // Fonte do editor
+    "editor.fontFamily": "'Fira Code Light', Consolas, 'Courier New', monospace",
+    "editor.fontSize": 13,
+    
+    // Tema
+    "workbench.colorTheme": "Dracula",
+    "workbench.preferredLightColorTheme": "Dracula",
+    "workbench.iconTheme": "material-icon-theme",
+
+    // Evita erros de importação com o PyQt5
     //"python.linting.pylintArgs": ["extension-pkg-whitelist=PyQt5"]
 }
