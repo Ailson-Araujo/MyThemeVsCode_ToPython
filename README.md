@@ -13,7 +13,8 @@
 
 4. Substitua os dados de Configuração do VSCode: *"settings.json"* pelos dados do [Setting_VSCode](https://github.com/Ailson-Araujo/MyThemeVsCode_ToPython/blob/main/Setting_VSCode.json). Os dados de configurações podem ser verificados precionando a tecla **F1**, em seguida digitar setting e selecionar a primeira opção exibida.
 
-## Instalação do ZSH
+<details>
+<summary><h2>Instalação do ZSH</summary>
 
 1. Instale o WSL2 conforme [página oficial](https://docs.microsoft.com/pt-br/windows/wsl/install)
 2. Após instalado e atualizado a distro do WSL com os camandos `sudo apt updade -y` e `sudo apt upgrade -y` seguimos com a instalação do ZSH executando os seguintes comandos:
@@ -69,5 +70,164 @@
     
 "terminal.integrated.defaultProfile.windows": "ZSH",
 ```
+</details>
+
+
+<details>
+<summary><h2>Instalação do FISH</summary>
+
+1. Instale o WSL2 conforme [página oficial](https://docs.microsoft.com/pt-br/windows/wsl/install)
+2. Após instalado e atualizado a distro do WSL com os camandos `sudo apt updade` e `sudo apt upgrade` seguimos com a instalação do **Fish** executando os seguintes comandos:
+
+   - `sudo apt install fish`
+   - `sudo apt-get install powerline fonts-powerline`
+   - `chsh -s /usr/bin/fish`
    
+3. Instalação de Tema.
+
+   - Gerenciador de Temas [Oh My Fish](https://github.com/oh-my-fish/oh-my-fish)
+   
+   - `curl -L http://get.oh-my.fish | fish`
+   
+   ### Tema Defaut
+   
+   - `omf install eclm`
+   
+   - Alguns comandos do Gerenciador:
+   
+       ```
+       > omf install [<name>|<url>] // Instalando um plugin  
+       > omf list // Lista os pacotes instalados   
+       > omf theme // Lista os temas intalados   
+       > omf theme [<name>] // Muda para o tema informado   
+       > omf remove [<name>] // Remove um pacote
+       ```
+   
+   ### Tema [Starship](https://starship.rs/)
+   
+   - Baixe a [fonte Nerd Fira Code](https://www.nerdfonts.com/) e instale no seu terminal:
+   
+        VSCode:
+        ```
+        "terminal.integrated.fontFamily": "FiraCode NF",
+        "terminal.integrated.fontSize": 14
+        ```
+    
+        Windows Terminal:
+        ```
+        "defaults": {
+            "fontFace": "FiraCode NF",
+            "fontSize": 11
+        },
+        ```
+   - Instale o tema **Starship**
+   
+       `curl -sS https://starship.rs/install.sh | sh`
+       
+   - Defina o tema para iniciar junto com o terminal
+   
+       `code ~/.config/fish/config.fish`
+       
+       No arquivo aberto adicione: `starship init fish | source` e salve o arquivo.
+       
+
+4. Configuração
+   
+   Crie o arquivo: `code ~/.config/starship.toml`
+       
+   Adicione o seguinte codigo:
+       
+       ```
+       # Get editor completions based on the config schema
+       "$schema" = 'https://starship.rs/config-schema.json'
+
+       # Inserts a blank line between shell prompts
+       add_newline = true
+
+       # Replace the "❯" symbol in the prompt with "➜"
+       [character] # The name of the module we are configuring is "character"
+       success_symbol = "[➜](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
+
+       # Disable the package module, hiding it from the prompt completely
+       [package]
+       disabled = true
+
+       ```
+       
+   - Personalização de Simbolos
+   
+       No mesmo arquivo acima podem ser adicionado o codigo abaixo:
+       
+       ```
+       [aws]
+       symbol = "  "
+
+       [buf]
+       symbol = " "
+       
+       [c]
+       symbol = " "
+       
+       [conda]
+       symbol = " "
+       
+       [dart]
+       symbol = " "
+       
+       [directory]
+       read_only = " "
+       
+       [docker_context]
+       symbol = " "
+       
+       [elixir]
+       symbol = " "
+       
+       [elm]
+       symbol = " "
+       
+       [git_branch]
+       symbol = " "
+       
+       [golang]
+       symbol = " "
+       
+       [haskell]
+       symbol = " "
+       
+       [hg_branch]
+       symbol = " "
+       
+       [java]
+       symbol = " "
+       
+       [julia]
+       symbol = " "
+       
+       [memory_usage]
+       symbol = " "
+       
+       [nim]
+       symbol = " "
+       
+       [nix_shell]
+       symbol = " "
+       
+       [nodejs]
+       symbol = " "
+       
+       [package]
+       symbol = " "
+       
+       [python]
+       symbol = " "
+       
+       [spack]
+       symbol = "🅢 "
+       
+       [rust]
+       symbol = " "
+
+       ```
+</details>
    
